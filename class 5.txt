@@ -1,0 +1,33 @@
+file management - chown, chmod, chage, rwx, sym links, inode number
+
+
+1. create a user , eg - demouser
+2. create a password for the new user
+3. create a folder inside /tmp
+4. create a file - eg : my_resume.txt inside the new folder
+5. change the user ownership of my_resume.txt to the demouser
+6. login as demouser and write some contents using vi inside the my_resume.txt
+7. exit out of the new user , view/cat the my_resume.txt
+
+Package management -->
+
+linux uses package managers - eg - apt, yum, rpm ,etc
+
+dependencies are other softwares which is required for the main software to work fine
+
+what is repository
+where we can see the repository
+
+different commands on apt/yum
+how to install a package
+what is dependency
+update the repository
+
+
+Any item in linux will be identified by a unique number - inode number
+
+
+to create a shortcut for the file in a different location - we use links
+
+Links can be 2 types - hard link and soft link
+

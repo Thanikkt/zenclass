@@ -1,0 +1,75 @@
+what is OS??
+
+Operating systems - 
+Eg - Linux, windows, macos, android, etc
+
+
+Physical or virtual machine - 
+
+
+Any computer that you can physically operate  - for eg -laptop, computer
+
+ 
+Processor, Memory, Motherboard, Storage(hard disk)
+
+
+windows+R --> RUN window
+ctrl+shft+ESC --> Task manager
+
+Cloud computing ??
+anything served over the internet like coimputer, storage, IoT is cloud computing.
+For eg - AWS / GCP / Digital ocean / azure, google drive/one drive
+AWS - amazon web services
+GCP - Google Cloud platform
+
+Google hard disk --> connected to internet --> charge you --> customer
+
+
+EC2 service  --> Elastic compute cloud --> CREATING VIRTUAL MACHINES
+
+Data center --> Region based eg - Mumbai, N.virginia, ohio, etc
+
+image - which OS
+spec - how much RAM/Memory, Storage, CPU
+
+aws instance - username - ubuntu
+key - pair --> private key(.pem), public key (inside the ec2)
+Authentication - username password, key pair, MFA --> Multifactor authentation, enable OTP via mobile, email, device(security key)
+
+
+how to connect to aws instance -->
+1. Systems manager or SSM --> AWS service
+2. Using SSh agent/client
+
+Command line Interface --> CLI
+Graphical user Interface --> GUI Windows
+
+Shell --> linux
+Command promt --> windows
+
+Protocol - set of standardisation rule
+
+What is SSH?? --> Secure Shell 
+
+number of users connected --> no of accepted connections by ssh
+default port for ssh - 22
+
+Task 1 - 
+1. Launching an instance --> t3.micro , key pair
+ssh -i "pem" username@publicip 
+Task 2 - optional 
+download virtual box
+download ubuntu server image
+
+
+windows --> command promt 
+ssh client --> cmd, mobaxterm, putty, xshell, git bash
+ putty --> puttygen, putty,pengagent
+
+
+
+
+
+
+
+

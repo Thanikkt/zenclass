@@ -1,0 +1,34 @@
+special permissions - 
+to make sure no one deletes the file accidently, we use sticky bits
+
+Networking - 
+we have a structure established to be followed while creating a network which give better explanation of how things are working inside a network --> OSI Open Systems Interconnection Model
+
+in network, everything is sent as packets
+
+tcp - used for wired connections, direct
+
+udp - mostly used for wireless connections / indirect connections
+
+client - making the request , eg - customer in hotel
+request - ordering an idli
+Server - respoding to the request, hotel
+
+Physical address - mac address
+Network address - IP address
+
+There are 2 basic version of ip address - ipv4, ipv6
+There are different classes of ipv4 address
+private will be - 10.x.x.x or 192.168.x.x or 172.x.x.x
+
+reserved ip address - 
+127.0.0.1 --> loop back address
+
+
+command to check ip address - ifconfig
+for windows - ipconfig
+
+you can access the router setup page by navigating to default gateway ip
+
+
+

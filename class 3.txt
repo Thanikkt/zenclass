@@ -1,0 +1,247 @@
+Linux Commands - 
+Structure of a command
+Getting help for a command 
+man page
+
+one feature of bash - using up arrow to get to the previously used commands
+another feature --> use tab to auto complete, use tab tab (tab twice) to list the options with same name
+use the last command based on word - ctrl + r --> recursive/ reverse search from history
+-r --> recursive, -f --> force, -v --> verbose (debug), -i --> interactive
+Information on list command - ls -l  - ll
+touch - creating a sample file 
+mkdir - create an empty directory
+create files like file1, file2, file3 till file5
+wild cards - {1..5} --> to create a range from 1 till 5
+ .. --> to go one step behind or the parent folder of the current folder 
+ . --> to refer to the current working directory
+rm --> to delete a file
+* --> everything /all
+cat --> to print the contents of a file
+echo --> to print some string/variable
+ >   --> is to forward or write to a file
+ >> --> is to append to a file
+ which --> to know the binary file of the command
+ cp file(src) file1(dest) --> to copy a file 
+mv --> move or rename a file or a folder
+ in linux the executable --> .bin (binary files)
+ 
+Vi/vim editor / nano editor -->
+to edit and modify files
+to delete the contents or purge the file without deleting the file--> echo "" > filename
+:linenumber --> to go to the line 
+dd --> to delete a specific line
+Shift + g --> to navigate to end of the file
+gg --> to navigate to top of the file
+:q! --> to forcefully quit
+/string --> to search a string top to bottom
+?string --> to search a string bottom to top (reverse)
+:%s/to/from --> to search and replace (use /g in the last to completely replace all occurences)
+we can use # as a separator instead of /
+
+ 
+Process management - ps, top, pid, kill, pidoff, pstree, swapon, free
+ps - to check all the running/idle/sleeping/zombie process
+ps -ef - short description of all running process
+ps -aux --> more info on processes
+top -> real time process tree view - task manager
+pid- process id
+ppid - parent process id
+
+    2  pwd
+    3  who
+    4  id
+    5  ls -l
+    6  touch --help
+    7  clear
+    8  touch sample_file
+    9  ls
+   10  ls -l
+   11  touch sample_file1
+   12  ls -l
+   13  mkdir sample_folder
+   14  ls -l
+   15  ls -l /etc
+   16  ls -lh /etc
+   17  ls -lh /etc/yum.repos.d/
+   18  clear
+   19  touch file{1..5}
+   20  ls
+   21  touch fi{1..5}le.sh
+   22  ls
+   23  cd sample_folder/
+   24  pwd
+   25  cd ..
+   26  pwd
+   27  cd sample_folder/
+   28  cd ../
+   29  clear
+   30  ls
+   31  mkdir sample_folder1
+   32  mkdir sample_folder2
+   33  ls sample_folder1/
+   34  cd sample_folder1/
+   35  ls
+   36  history
+   37  clear
+   38  ls
+   39  cd ../
+   40  ls
+   41  history
+   42  clear
+   43  cd sample_folder
+   44  touch fi{1..5}le.sh
+   45  ls
+   46  rm fi1le.sh
+   47  ls
+   48  rm fi{1..5}le.sh
+   49  ls
+   50  rm fi*
+   51  ls
+   52  clear
+   53  touch fi{1..5}le.sh
+   54  cd ../
+   55  ls
+   56  rm sample_folder
+   57  rm sample_folder1
+   58  rm --help
+   59  clear
+   60  rm --help
+   61  rm -d sample_folder1
+   62  ls -l
+   63  rm -d sample_folder
+   64  rm -fd sample_folder
+   65  tree
+   66  sudo yum install tree
+   67  clear
+   68  tree sample_folder
+   69  rm --help
+   70  clear
+   71  rm --help
+   72  clear
+   73  ls
+   74  rm file2
+   75  rm -v file4
+   76  tree sample_folder
+   77  rm -rv sample_folder
+   78  nano file3
+   79  ls
+   80  clear
+   81  ls
+   82  echo "Hello this is my 3rd class"
+   83  echo "Hello this is my 3rd class="
+   84  cat file1
+   85  cat sample_folder2
+   86  echo "Hello this is my 3rd class=" > file1
+   87  cat file1
+   88  echo "second line inside the file" > file1
+   89  cat file1
+   90  echo "Hello this is my 3rd class" > file1
+   91  cat file1
+   92  echo "second line inside the file" >> file1
+   93  cat file1
+   94  history
+   95  clear
+   96  which echo
+   97  cat /usr/bin/echo
+   98  ls -l /usr/bin/echo
+   99  ls -hl /usr/bin/echo
+  100  ls /bin/
+  101  clear
+  102  ls
+  103  cp --help
+  104  clear
+  105  cat /usr/bin/echo
+  106  clear
+  107  cat file1
+  108  cp file1 file_main
+  109  ls
+  110  ls -l
+  111  ls -lt
+  112  ls -lrt
+  113  ls -lrth
+  114  mkdir main_dir
+  115  cd main_dir/
+  116  touch fi{1..5}le.sh
+  117  ls
+  118  cd ../
+  119  ls
+  120  clear
+  121  ls
+  122  ls sample_folder2/
+  123  cp main_dir/ sample_folder2/
+  124  mkdir sample_dir
+  125  cp sample_dir sample_folder2/
+  126  cp -r sample_dir sample_folder2/
+  127  ls sample_folder2/
+  128  tree sample_folder2/
+  129  cp -rv main_dir sample_folder2/
+  130  tree sample_folder2/
+  131  pwd
+  132  ls
+  133  rm -r sample_folder2/main_dir/
+  134  ls sample_folder2/
+  135  ls
+  136  cd /tmp/
+  137  clear
+  138  pwd
+  139  cd
+  140  clear
+  141  ls
+  142  mv -v main_dir sample_folder2/
+  143  ls
+  144  ls sample_folder2/
+  145  tree sample_folder2/
+  146  mv fi1le.sh file1.sh
+  147  ls -lrth
+  148  cat file1
+  149  clear
+  150  cat file1
+  151  mv file1 main_contents
+  152  cat file1
+  153  cat main_contents
+  154  mv --help
+  155  clear
+  156  ls
+  157  mv sample_folder2/main_dir .
+  158  ls
+  159  mv -i main_dir sample_folder2
+  160  cp -ri sample_folder2/main_dir .
+  161  ls
+  162  cp --help
+  163  clear
+  164  ls
+  165  rm -riv main_dir
+  166  clear
+  167  ls
+  168  vim new_file
+  169  clear
+  170  ls -lrth
+  171  cat new_file
+  172  echo "" > new_file
+  173  cat new_file
+  174  vim new_file
+  175  sudo yum install nginx
+  176  clear
+  177  vim new_file
+  178  ps
+  179  ps --help
+  180  man ps
+  181  ps -ef
+  182  ps -aux
+  183  top
+  184  ps -aux
+  185  pstree
+  186  ps -ef
+  187  history
+
+Archiving and compression --> zip, 7z, tar (gzip, xzip, gzip2)
+
+
+User and group management - 
+
+In OS - users and groups will be present
+users will be part of group
+eg - devops1 --> user, devops --> group
+devops2 --> user, devops group
+ 
+

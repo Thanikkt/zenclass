@@ -1,0 +1,142 @@
+What is hypervisor -? Hyper V -, esxi, OS
+It is a software more often an operating system  to run the virtual machines
+
+
+Interfaces - GUI, CLI, TLI
+
+NIC - > Network interface , Wifi, ethernet
+
+File System -->
+The format in which the files should be stored in a storage is called a filesystem
+windows - ntfs, fat32, exfat32
+linux - xfs, ext4, etc
+
+
+disk management --> windows --> diskmgmt.msc
+
+Storage - can be divided into sections --> partitions/volumes
+Boot partition - Windows - EFI/UEFI, legacy (Os files to load drivers, hardware related checks)
+
+Linux - GRUB loaders
+
+Process - 
+Power ON --> BIOS - POST - Search boot device - Find boot partiion - Boot loader - Init process
+BIOS --> firmware -> basic software to control all your input output devices
+BIOS - Basic input output system
+
+system drivers - > it is basic fotware to control your input output devices
+
+to check if all drivers are installed for all your devices --> devmgmt.msc
+
+/boot/shibli/test1
+
+
+File system structure - 
+windows - OS drive name is C:
+folders
+Linux - OS drive name is / (root)
+directories
+
+in windows --> to open a program - .exe
+in linux --> bin files (binary)
+
+
+/etc --> system and software package related config files ==== windows === Program files
+/bin --> binary files location == Program files in windows
+/opt /var --> optional and variable related ==> windows C:\windows
+/boot --> boot files / grub loader files ==> C:\Windows\Boot
+/tmp - temperory dir --> never store important configs here
+/home --> User related home directory ==> C:\Users
+/usr --> user related configs or binaries or variables
+/root --> Root(superadmin) user home directory
+
+GUI
+Copy - CTRL + C
+Paste  - CTRL + V
+CLI
+Copy - CTRL + Insert
+Paste - Shift + Insert
+
+
+ssh
+clear --> to visually clear the screen
+
+Shell - CLI for linux to communicate withh the VM or instance. Eg --> sh, bash, zsh, csh , etc
+
+
+Wild cards --> symbolic representation or shortcut for a a function/process/path
+~ --> tilde symbol --> represents home directory of current user
+
+pwd --> present working directory 
+cd --> change directory 
+ls --> list the contents of the directory or a files
+/ --> root dir
+long list --> with more information on the list of items of a dir --> ls -l
+history --> to view the history of commands executed in the current shell
+uname -a --> all info about the system
+who --> which users are logged in
+whoami --> current user name
+
+
+Alias -->
+create shortcuts for long commands
+eg - alias sysinfo="uname -a"
+User specific / System specific
+
+
+man page --> manual page of a any command/package
+man ls
+to navigate to next page --> space bar
+to navigate to previous page - b 
+to come out of the man page --> q
+
+to get help of a command -->
+command --help or -h or help
+
+   1  clear
+    2  which
+    3  which bash
+    4  clear
+    5  id ubuntu
+    6  sudo apt-get install finger
+    7  clear
+    8  uname
+    9  uname -a
+   10  clear
+   11  pwd
+   12  cd /home
+   13  ls
+   14  cd /home
+   15  cd
+   16  pwd
+   17  ls
+   18  ls /
+   19  ls -l
+   20  pwd
+   21  ls -l /
+   22  man ls
+   23  ls --help
+   24  man ls
+   25  clear
+   26  history
+   27  sudo su
+   28  clear
+   29  ls /home/
+   30  who
+   31  date
+   32  who --help
+   33  clear
+   34  sh
+   35  clear
+   36  uname -a
+   37  alias sysinfo="uname -a"
+   38  sysinfo
+   39  exit
+   40  clear
+   41  ll
+   42  ll --help
+   43  ll /
+   44  ls -lh
+   45  ls -lh /
+   46  clear
+   47  history

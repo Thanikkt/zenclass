@@ -1,0 +1,75 @@
+sudo apt update
+
+sudo apt-get install nginx
+sudo apt install traceroute
+
+service servicename status/stop/start
+service nginx status
+
+networking commands - 
+
+1.ping command --> to check if the address or dns name is reachable, it uses ICMP protocol
+eg - ping google.com 
+ping 127.0.0.1
+
+2. telnet command --> to check network connectivity on specific port on a specific server
+eg - telnet 44.201.91.246 22
+alternative -  nc -zv ec2-44-201-91-246.compute-1.amazonaws.com 80
+
+
+3. netstat (old) / ss -->how to check which ports are open in linux machine
+eg - ss -tulpn
+
+4. dig command --to dig deeper into the touchpoints of the destination
+alternative - traceroute
+
+5. curl / wget --> to visit a website or to download a file from the network
+eg - curl http://ec2-44-201-91-246.compute-1.amazonaws.com -v
+
+6. nslookup - a simple command to check the ip address destination 
+eg - 
+nslookup ec2-44-201-91-246.compute-1.amazonaws.com
+Server:         127.0.0.53
+Address:        127.0.0.53#53
+
+Non-authoritative answer:
+Name:   ec2-44-201-91-246.compute-1.amazonaws.com
+Address: 172.31.77.146
+
+
+Firewall -->
+eg - Security groups (outside the machine )
+This is to allow / disallow network traffic to / from another network CIDR 
+Ingress --> inbound traffic
+Egress --> outbound traffic
+
+inside the machine - 
+eg - ufw, firewalld
+
+Advanced level of firewall - iptable
+
+ssh - 
+
+the communication between client and server using port 22 is secured by encryption
+
+config file - /etc/ssh/sshd_config
+Full Setup for a New Linux User
+1. Create the user on the server:
+sudo useradd -m -s /bin/bash demouser
+sudo passwd demouser  # optional: set a password
+2. Generate the key pair (on your local machine or the server):
+ssh-keygen -t ed25519 -C "demouser" -f /tmp/demouser_key -N ""
+3. Set up the public key for the user:
+# Create .ssh directory for demouser
+sudo mkdir -p /home/demouser/.ssh
+sudo cp /tmp/demouser_key.pub /home/demouser/.ssh/authorized_keys
+# Set correct ownership and permissions
+sudo chown -R demouser:demouser /home/demouser/.ssh
+sudo chmod 700 /home/demouser/.ssh
+sudo chmod 600 /home/demouser/.ssh/authorized_keys
+
+
+
+
+
+
