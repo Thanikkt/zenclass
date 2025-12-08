@@ -1,0 +1,95 @@
+linux to change network setting
+
+nmcli - cli command
+ipaddress 
+nmtui --> terminal user interface
+
+ipadd status  
+
+Task - install nmcli utility
+list all the information about all the NICs connected/enabled using nmcli command
+Try nmtui
+
+
+Scripting - 
+
+What is scripting?
+to automate any manual task using a scripting language. Eg - shell, python, go, powershell, ruby, javascript 
+
+every morning, i need to run apt update
+apt autoclean
+rm -rf /var/log/custom.log
+simply create a script --> script.sh --> add it to a cron job
+
+shell -->
+it uses linux commands inside the script, no additional requirements needed
+
+shell script should start with -->
+#!/bin/bash --> this is the interpretor to run the script
+is it necessary ? No (if it is not specified , the existing shell on which the user is logged into will be taken as the interpretor)
+
+how to execute the script ?
+you need to set execute permissions - chmod +x file.sh
+either use - ./file.sh
+or
+bash file.sh 
+
+what are variables ??
+variables are small storage items which can store values which can be modified
+
+Environment Variables - 
+In linux , there are environment variables that can be defined for each user and for complete OS
+command - printenv
+
+to display specific variable from the env - echo $envname , eg - echo $USER
+to set an env var - export var="myenv"
+
+inside the script - 
+
+var1="somthing" --> string 
+type of values  --> string, int, float, binary
+eg for int` - 
+var1=3
+eg for float 
+var1=3.10
+eg for binary 
+var1=true --> it can be true or false (0 or 1)
+
+
+to echo the output of a command 
+
+echo $(date)
+
+
+configuration for your shell (for ubuntu)
+ - ~/.bashrc
+add alias or set env variables and save the file
+source ~/.bashrc  --> to reload shell configs
+alternative option to reload - relogin to same user or restart your system
+
+other important types of variables - 
+
+1. list
+2. array
+
+cronjobs - (crontab) 
+to schedule and run a command or a script 
+
+
+
+scp - to cp between 2 servers securely 
+eg - 
+scp -i "C:\Users\alfat\Downloads\firstkey.pem" "C:\Users\alfat\OneDrive\Documents\DevOPs\sample3.sh" ubuntu@18.204.1.210:/tmp
+scp -i pem srcfile desaddress:/place
+
+
+sample script -->
+
+#!/bin/bash
+
+x=3
+y=4
+echo "$x is the value of x"
+echo "$y is the value of y"
+echo "$(( $x + $y )) is the output"
+echo "$(date) -  $0 is the script name"
